@@ -39,7 +39,7 @@ public class BalancedBrackets {
         }
         return characterStack.isEmpty();
     }
-
+//adding comment
     private static boolean checkIfAptCharPresent(Stack<Character> characterStack, char ch) {
         if(!characterStack.isEmpty() && characterStack.peek() == ch){
             characterStack.pop();
