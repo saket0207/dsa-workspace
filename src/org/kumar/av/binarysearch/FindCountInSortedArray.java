@@ -1,7 +1,7 @@
 package org.kumar.av.binarysearch;
 
 public class FindCountInSortedArray {
-
+//Count of occurrence of a given number
     public static void main(String[] args) {
 
         int [] arr = {5, 7, 7, 7, 7, 18, 26, 37};
