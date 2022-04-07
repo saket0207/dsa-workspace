@@ -12,20 +12,25 @@ public class FindMinimum {
     }
 
     private static int findMinElement(int[] arr) {
-        int start = 0, end = arr.length - 1;
-        int N = arr.length;
-        while(start <= end){
-            int mid = start + (end - start)/2;
-            int next = (mid - 1) % N;
-            int prev = (mid - 1 + N) % N;
-            if(arr[mid] < arr[next] && arr[mid] < arr[prev]){
+        int start = 0, end = arr.length - 1, N = arr.length;
+
+        while (start <= end){
+            if(arr[start] < arr[end]){
+                return start;
+            }
+            int mid = start + (end - start) / 2;
+            int next = (mid + 1) % N;
+            int prev = (mid + N - 1)% N;
+            if(arr[mid] <= arr[next] && arr[mid] <= arr[prev]){
                 return mid;
-            }else if(arr[0] <= arr[mid]){
+            }
+            if(arr[start] <= arr[mid]){
                 start = mid + 1;
-            }else if(arr[mid] <= arr[end]){
+            }else if(arr[mid] >= arr[end]){
                 end = mid - 1;
             }
         }
         return -1;
     }
+
 }
