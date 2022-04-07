@@ -6,18 +6,19 @@ public class FindElementInSortedRotatedArray {
 
         int [] arr =  {11, 12, 15, 16, 18, 2, 5, 6, 8};
         //find minimum  0   1   2   3   4   5  6 7  8
-        int n = 16;
+        int n = 161;
 
         int minElementIndex = findElementInSorted(arr, n);
         int indexLow = binarySearchCust(arr, 0, minElementIndex-1, n);
         int indexHi = binarySearchCust(arr, minElementIndex, arr.length-1, n);
-        int index = 0;
+        int index = -1;
         if(indexLow > 0){
-            index = indexLow;
+            System.out.println(indexLow);
         }else if(indexHi > 0){
-            index = indexHi;
+            System.out.println(indexHi);
+        }else {
+            System.out.println(index);
         }
-        System.out.println(index);
     }
 
     private static int binarySearchCust(int[] arr, int start, int end, int n) {
