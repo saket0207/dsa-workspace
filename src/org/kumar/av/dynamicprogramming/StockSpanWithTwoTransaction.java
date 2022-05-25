@@ -1,4 +1,4 @@
-package org.kumar.basics.dynamicprogramming;
+package org.kumar.av.dynamicprogramming;
 
 import java.util.Scanner;
 

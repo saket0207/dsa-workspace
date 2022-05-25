@@ -1,4 +1,4 @@
-package org.kumar.av.binarysearch.av.dynamicprogramming;
+package org.kumar.dynamicprogramming;
 
 public class KnapsackO1 {
     public static void main(String[] args) {
